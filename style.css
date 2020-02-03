@@ -1,0 +1,174 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+.left-container {
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-container .content-container {
+    width: 40rem;
+}
+
+.left-container .content-container .login-container {
+    margin-top: 3.8rem;
+}
+
+.left-container .content-container .login-container h1 {
+    font-size: 3rem;
+    color: #000000;
+}
+
+.left-container .content-container .login-container .label {
+    font-size: 1rem;
+    letter-spacing: 0.22rem;
+    margin-bottom: 0.5rem;
+}
+
+.left-container .content-container .login-container .label:not(:first-child) {
+    margin-top: 2rem;
+}
+
+.left-container .content-container .login-container .textbox {
+    height: 4rem;
+    width: 27.2rem;
+    display: block;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1.3rem;
+    border: 0.8px solid black;
+    color: rgb(65, 65, 65);
+}
+
+.left-container .content-container .login-container .button {
+    height: 4rem;
+    width: 27.2rem;
+    margin-top: 2rem;
+    color: white;
+    outline: none;
+    border: none;
+    background-color: black;
+    letter-spacing: 0.22rem;
+    transition: background-color 0.2s;
+    font-size: 1rem;
+}
+
+.left-container .content-container .login-container .button:hover {
+    background-color: rgba(0,0,0,0.80);
+    cursor: pointer;
+}
+
+.left-container .content-container .information-container {
+    margin-top: 10rem;
+}
+
+.left-container .content-container .information-container .heading {
+    font-size: 2rem;
+    color: #1C1C1C;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.left-container .content-container .information-container .heading:not(:first-child) {
+    margin-top: 5rem;
+}
+
+.left-container .content-container .information-container .body {
+    font-size: 1.4rem;
+    font-weight: normal;
+    color: #393939;
+}
+
+.right-container {
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-container .card-container {
+    width: 40rem;
+    height: 53rem;
+    border: #232ed1 5px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-container .card-container .card-content {
+    width: 19.5rem;
+}
+
+.right-container .card-container .card-content .qrcode {
+    width: 19.5rem;
+    height: 19.5rem;
+}
+
+.right-container .card-container .card-content .important {
+    margin-top: 2rem;
+    color: #232ed1;
+}
+
+.right-container .card-container .card-content .important .ssid {
+    font-weight: 600;
+    font-size: 1.8rem
+}
+
+.right-container .card-container .card-content .important .password {
+    font-weight: normal;
+    font-size: 1.3rem;
+}
+
+.right-container .card-container .card-content .instructions {
+    font-weight: normal;
+    font-size: 1rem;
+    margin-top: 2.5rem;
+    color: #6564db;
+}
+
+@media (max-width: 1080px) {
+    .left-container .content-container {
+        width: 35rem;
+    }
+
+    .right-container .card-container {
+        width: 35rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    body {
+        flex-direction: column;
+    }
+
+    .left-container {
+        height: auto;
+        width: auto;
+        margin-top: 8rem;
+    }
+
+    .right-container {
+        height: auto;
+        width: auto;
+        margin-top: 10rem;
+        margin-bottom: 10rem;
+    }
+}
