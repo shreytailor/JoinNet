@@ -102,6 +102,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .right-container .card-container {
@@ -144,6 +145,12 @@ body {
     color: #6564db;
 }
 
+.right-container .credits {
+    font-size: 1.3rem;
+    margin-top: 5rem;
+    color: rgb(179, 179, 179);
+}
+
 @media (max-width: 1080px) {
     .left-container .content-container {
         width: 35rem;
@@ -169,6 +176,6 @@ body {
         height: auto;
         width: auto;
         margin-top: 10rem;
-        margin-bottom: 10rem;
+        margin-bottom: 8rem;
     }
 }
