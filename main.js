@@ -35,7 +35,8 @@ function generateString(ssid, password) {
 jQuery('#qrcode').qrcode({
     width: 195,
     height: 195,
-    text: "WIFI:S:OnTheMoon;T:WPA;P:Mars2001;"
+    text: "WIFI:S:OnTheMoon;T:WPA;P:Mars2001;",
+    foreground: "#232ed1"
 });
 
 // When the button is clicked, get the SSID and Password from the textboxes.
