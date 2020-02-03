@@ -41,25 +41,20 @@ jQuery('#qrcode').qrcode({
 
 // When the button is clicked, get the SSID and Password from the textboxes.
 document.getElementById('button').addEventListener('click', function(event) {
-    // Clearing the HTML of the 'qrcode' div.
-    document.getElementById('qrcode').innerHTML = '';
-
     // Retrieving the values entered by the user.
     let ssid = document.getElementById('ssid').value;
     let password = document.getElementById('password').value;
 
-    // If the SSID and the Password fields are empty, show the default QR code.
-    if (ssid === '' && password === '') {
-        jQuery('#qrcode').qrcode({
-            width: 195,
-            height: 195,
-            text: "WIFI:S:OnTheMoon;T:WPA;P:Mars2001;",
-            foreground: "#232ed1"
-        });
+    // Clearing the HTML of the 'qrcode' div.
+    document.getElementById('qrcode').innerHTML = '';
 
-        document.getElementById('ssidForm').textContent = 'OnTheMoon';
-        document.getElementById('passwordForm').textContent = 'Mars2001';
-    } else {
+
+    // If the SSID and the Password fields are empty, show the default QR code.
+    if (ssid != '') {
+        // Returning the borders to normal.
+        document.getElementById('ssid').style.border = '1px solid black';
+        document.getElementById('password').style.border = '1px solid black';
+
         // Creating the string which will be used to generate the QR code.
         let generatedString = generateString(ssid, password);
 
@@ -71,9 +66,29 @@ document.getElementById('button').addEventListener('click', function(event) {
             foreground: "#232ed1"
         });
 
+        // Setting the card's information to the new SSID and Password.
         document.getElementById('ssidForm').textContent = ssid;
         document.getElementById('passwordForm').textContent = password;
-    }
 
-    
+        // Bringing the card into view, for the mobile devices.
+        document.getElementById('card').scrollIntoView({
+            behavior: "smooth"
+        });
+    } else {
+        // Displaying the QR code for the default SSID and Password.
+        jQuery('#qrcode').qrcode({
+            width: 195,
+            height: 195,
+            text: "WIFI:S:OnTheMoon;T:WPA;P:Mars2001;",
+            foreground: "#232ed1"
+        });
+
+        // Setting the card's information to the default SSID and Password.
+        document.getElementById('ssidForm').textContent = 'OnTheMoon';
+        document.getElementById('passwordForm').textContent = 'Mars2001';
+
+        // If there is any error with the input, the border of the input boxes turn red.
+        document.getElementById('ssid').style.border = '1px solid red';
+        document.getElementById('password').style.border = '1px solid red';
+    }
 });

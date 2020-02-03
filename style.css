@@ -31,7 +31,7 @@ body {
     margin-top: 3.8rem;
 }
 
-.left-container .content-container .login-container h1 {
+.left-container .content-container h1 {
     font-size: 3rem;
     color: #000000;
 }
@@ -80,9 +80,9 @@ body {
 }
 
 .left-container .content-container .information-container .heading {
-    font-size: 2rem;
+    font-size: 1.6rem;
     color: #1C1C1C;
-    font-weight: bold;
+    font-weight: 600;
     margin-bottom: 1rem;
 }
 
