@@ -27,19 +27,19 @@ body {
     width: 40rem;
 }
 
-.left-container .content-container .login-container {
-    margin-top: 3.8rem;
-}
-
 .left-container .content-container h1 {
     font-size: 3rem;
     color: #000000;
 }
 
+.left-container .content-container .login-container {
+    margin-top: 3.8rem;
+}
+
 .left-container .content-container .login-container .label {
     font-size: 1rem;
     letter-spacing: 0.22rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.6rem;
 }
 
 .left-container .content-container .login-container .label:not(:first-child) {
@@ -53,7 +53,7 @@ body {
     padding-left: 1rem;
     padding-right: 1rem;
     font-size: 1.3rem;
-    border: 0.8px solid black;
+    border: 1.2px solid black;
     color: rgb(65, 65, 65);
 }
 
@@ -68,6 +68,7 @@ body {
     letter-spacing: 0.22rem;
     transition: background-color 0.2s;
     font-size: 1rem;
+    display: block;
 }
 
 .left-container .content-container .login-container .button:hover {

@@ -1,5 +1,5 @@
-// A function which creates a string that can be used to generate the QR code.
-function generateString(ssid, password) {
+// A function that generates the QR code, and adds it to the div when given the SSID and Password.
+function generateCode(ssid, password) {
 
     // Setting the default authentication type to 'WPA'.
     let authType = 'WPA';
@@ -26,18 +26,37 @@ function generateString(ssid, password) {
     // Converting the password array back to a normal password again.
     password = passwordArray.join('');
 
-    // Returning the final string which can now be used to generate the QR code.
-    return `WIFI:S:${ssid};T:${authType};P:${password};`;
+    // Clearing the current QR code in the div.
+    document.getElementById('qrcode').innerHTML = '';
+
+    // Adding the new QR code to the div.
+    jQuery('#qrcode').qrcode({
+        width: 195,
+        height: 195,
+        text: `WIFI:S:${ssid};T:${authType};P:${password};`,
+        foreground: "#232ed1"
+    });
+
+    // Setting the new SSID and Password to the card information.
+    document.getElementById('ssidForm').textContent = ssid;
+    document.getElementById('passwordForm').textContent = password;
 
 }
 
+
+
+// ------------------------------------------------------------------------------------------------------------------------------------
+// ************************************************************************************************************************************
+// ------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+// Clearing the SSID and Password textboxes when the window is reloaded.
+document.getElementById('ssid').value = '';
+document.getElementById('password').value = '';
+
 // Displaying the default QR code when the browser is refreshed.
-jQuery('#qrcode').qrcode({
-    width: 195,
-    height: 195,
-    text: "WIFI:S:OnTheMoon;T:WPA;P:Mars2001;",
-    foreground: "#232ed1"
-});
+generateCode('MySSID', 'somepassword');
 
 // When the button is clicked, get the SSID and Password from the textboxes.
 document.getElementById('button').addEventListener('click', function(event) {
@@ -45,30 +64,14 @@ document.getElementById('button').addEventListener('click', function(event) {
     let ssid = document.getElementById('ssid').value;
     let password = document.getElementById('password').value;
 
-    // Clearing the HTML of the 'qrcode' div.
-    document.getElementById('qrcode').innerHTML = '';
-
-
     // If the SSID and the Password fields are empty, show the default QR code.
     if (ssid != '') {
         // Returning the borders to normal.
         document.getElementById('ssid').style.border = '1px solid black';
         document.getElementById('password').style.border = '1px solid black';
 
-        // Creating the string which will be used to generate the QR code.
-        let generatedString = generateString(ssid, password);
-
-        // Generating the QR code.
-        jQuery('#qrcode').qrcode({
-            width: 195,
-            height: 195,
-            text: generatedString,
-            foreground: "#232ed1"
-        });
-
-        // Setting the card's information to the new SSID and Password.
-        document.getElementById('ssidForm').textContent = ssid;
-        document.getElementById('passwordForm').textContent = password;
+        // Calling the function to generate the QR code.
+        generateCode(ssid, password);
 
         // Bringing the card into view, for the mobile devices.
         document.getElementById('card').scrollIntoView({
@@ -76,16 +79,7 @@ document.getElementById('button').addEventListener('click', function(event) {
         });
     } else {
         // Displaying the QR code for the default SSID and Password.
-        jQuery('#qrcode').qrcode({
-            width: 195,
-            height: 195,
-            text: "WIFI:S:OnTheMoon;T:WPA;P:Mars2001;",
-            foreground: "#232ed1"
-        });
-
-        // Setting the card's information to the default SSID and Password.
-        document.getElementById('ssidForm').textContent = 'OnTheMoon';
-        document.getElementById('passwordForm').textContent = 'Mars2001';
+        generateCode('MySSID', 'somepassword');
 
         // If there is any error with the input, the border of the input boxes turn red.
         document.getElementById('ssid').style.border = '1px solid red';
