@@ -8,11 +8,12 @@ document.getElementById('downloadButton').addEventListener('click', function(eve
         let doc = new jsPDF({
             orientation: 'potrait',
             units: 'px',
-            format: 'a4'
+            format: 'a4',
         });
+        // doc.setFillColor(218, 218, 217, 0);
+        // doc.rect(0, 0, 595.28, 841.89, "F");
         doc.addImage(image, 'PNG', 44.42, 51.47, 120, 159, 'Alias', 'NONE');
         doc.save('JoinNet - Network QR.pdf');
-        console.log('Done');
     });
 
 });

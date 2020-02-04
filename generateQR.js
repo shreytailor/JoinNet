@@ -34,7 +34,8 @@ function generateCode(ssid, password) {
         width: 195,
         height: 195,
         text: `WIFI:S:${ssid};T:${authType};P:${password};`,
-        foreground: "#232ed1"
+        foreground: "#232ed1",
+        background: 'transparent'
     });
 
     // Setting the new SSID and Password to the card information.

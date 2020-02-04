@@ -10,7 +10,6 @@ html {
 }
 
 body {
-    background-color: white;
     display: flex;
     flex-direction: row;
 }
@@ -158,13 +157,13 @@ body {
     font-weight: normal;
     font-size: 1rem;
     margin-top: 2.5rem;
-    color: #6564db;
+    color: #494949;
 }
 
 .right-container .credits {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     margin-top: 4rem;
-    color: rgb(110, 110, 110);
+    color: #1f1f1f;
 }
 
 @media (max-width: 1080px) {
