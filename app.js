@@ -21,3 +21,6 @@ document.getElementById('password').addEventListener('keyup', function(event) {
 document.addEventListener('contextmenu', function(event) {
     event.preventDefault();
 });
+
+// Animating the title.
+document.getElementById('title').style.opacity = '100%';

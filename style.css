@@ -30,7 +30,10 @@ body {
 
 .left-container .content-container h1 {
   font-size: 3rem;
+  opacity: 0%;
+  transform: translateX(-20%);
   color: black;
+  transition: opacity 1.2s;
 }
 
 .left-container .content-container .login-container {
@@ -73,10 +76,12 @@ body {
   transition: background-color 0.2s;
   font-size: 1rem;
   display: block;
+  transition: letter-spacing 0.5s;
 }
 
 .left-container .content-container .login-container .button:hover {
   background-color: rgba(0, 0, 0, 0.8);
+  letter-spacing: 0.4rem;
   cursor: pointer;
 }
 

@@ -10,8 +10,6 @@ document.getElementById('downloadButton').addEventListener('click', function(eve
             units: 'px',
             format: 'a4',
         });
-        // doc.setFillColor(218, 218, 217, 0);
-        // doc.rect(0, 0, 595.28, 841.89, "F");
         doc.addImage(image, 'PNG', 44.42, 51.47, 120, 159, 'Alias', 'NONE');
         doc.save('JoinNet - Network QR.pdf');
     });
@@ -20,5 +18,12 @@ document.getElementById('downloadButton').addEventListener('click', function(eve
 
 // Click event listener for the print button.
 document.getElementById('printButton').addEventListener('click', function(event) {
-    alert('The print button was clicked.');
+    
+    html2canvas(document.getElementById('card'), {
+        allowTaint: true
+    }).then(function(canvas) {
+        let image = canvas.toDataURL("image/png");
+        window.open(image);
+    });
+
 });
