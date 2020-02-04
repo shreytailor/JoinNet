@@ -1,0 +1,20 @@
+{
+  "name": "joinnet",
+  "version": "1.0.0",
+  "description": "A utility which generates QR codes for your WiFi network.",
+  "main": "generateQR.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shreytailor/joinnet.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shreytailor/joinnet/issues"
+  },
+  "homepage": "https://github.com/shreytailor/joinnet#readme",
+  "dependencies": {}
+}

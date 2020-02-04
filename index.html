@@ -7,6 +7,8 @@
     <title>JoinNet</title>
 
     <!-- Embedding all the needed files. -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet"> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="jquery.qrcode.min.js"></script>
@@ -34,6 +36,10 @@
     </div>
 
     <div class="right-container">
+        <div class="icons">
+            <img src="icons/download-icon.png" alt="download" class="icon" id="downloadButton">
+            <img src="icons/print-icon.png" alt="print" class="icon" id="printButton">
+        </div>
         <div id="card" class="card-container">
             <div class="card-content">
                 <div id="qrcode" class="qrcode"></div>
@@ -41,14 +47,15 @@
                     <p class="ssid" id="ssidForm">MySSID</p>
                     <p class="password" id="passwordForm">somepassword</p>
                 </div>
-                <p class="instructions">Connect to this network by scanning the QR code above with your device.</p>
+                <p class="instructions">Connect to this network by scanning the QR code above with your device. Otherwise, connect manually.</p>
             </div>
         </div>
         <p class="credits">Developed by Shrey with ❤️</p>
     </div>
 
     <!-- Adding the main.js to the file. -->
-    <script src="main.js"></script>
+    <script src="generateQR.js"></script>
+    <script src="generatePDF.js"></script>
 
 </body>
 </html>

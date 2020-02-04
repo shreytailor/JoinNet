@@ -113,6 +113,21 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+.right-container .icons {
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+}
+
+.right-container .icons .icon {
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+.right-container .icons .icon:not(:first-child) {
+    margin-left: 2.5rem;
 }
 
 .right-container .card-container .card-content {
@@ -148,8 +163,8 @@ body {
 
 .right-container .credits {
     font-size: 1.3rem;
-    margin-top: 5rem;
-    color: rgb(179, 179, 179);
+    margin-top: 4rem;
+    color: rgb(110, 110, 110);
 }
 
 @media (max-width: 1080px) {
