@@ -31,7 +31,6 @@ body {
 .left-container .content-container h1 {
   font-size: 3rem;
   opacity: 0%;
-  transform: translateX(-20%);
   color: black;
   transition: opacity 1.2s;
 }
