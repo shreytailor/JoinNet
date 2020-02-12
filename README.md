@@ -2,7 +2,6 @@
 ## Table of Contents
 + [About](#about)
 + [Getting Started](#getting_started)
-+ [Usage](#usage)
 
 ## About <a name = "about"></a>
 Having friends or guests come over to your house is always exciting... until they ALL ask for your WiFi password. Most people (like me) do not change their default password which is something like *9912WERJjdsad9* - so it is a hassle passing it onto everyone. 
