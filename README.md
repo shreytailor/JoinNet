@@ -4,7 +4,7 @@
 + [Getting Started](#getting_started)
 
 ## About <a name = "about"></a>
-Having friends or guests come over to your house is always exciting... until they ALL ask for your WiFi password. Most people (like me) do not change their default password which is something like *9912WERJjdsad9* - so it is a hassle passing it onto everyone. 
+Having friends or guests come over to your house is always exciting, until they all ask for your WiFi password. Most people do not really change their default modem password which can be something really random and hard to remember - so it is a hassle connecting everyone.
 
 This problem gave me the motivation to create a tool which generates a QR code for your WiFi credentials, so you only have to go through the process once and then it always stays with you. If some devices cannot scan QR codes, they can also join manually as the generated card also contains the credentials.
 
