@@ -143,10 +143,6 @@ body {
   background-color: white;
 }
 
-.right-container .icons .icon:not(:first-child) {
-  margin-left: 2.5rem;
-}
-
 .right-container .card-container .card-content {
   width: 19.5rem;
 }

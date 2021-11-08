@@ -15,15 +15,3 @@ document.getElementById('downloadButton').addEventListener('click', function(eve
     });
 
 });
-
-// Click event listener for the print button.
-document.getElementById('printButton').addEventListener('click', function(event) {
-    
-    html2canvas(document.getElementById('card'), {
-        allowTaint: true
-    }).then(function(canvas) {
-        let image = canvas.toDataURL("image/png");
-        window.open(image);
-    });
-
-});
